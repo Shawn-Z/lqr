@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/shawn/catkin_ws/src/lqr/cmake-build-debug/devel/setup.sh

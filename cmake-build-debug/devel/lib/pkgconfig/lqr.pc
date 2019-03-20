@@ -1,0 +1,8 @@
+prefix=/home/shawn/catkin_ws/src/lqr/cmake-build-debug/devel
+
+Name: lqr
+Description: Description of lqr
+Version: 0.0.0
+Cflags: -I/home/shawn/catkin_ws/src/lqr/include
+Libs: -L/home/shawn/catkin_ws/src/lqr/cmake-build-debug/devel/lib 
+Requires: roscpp
