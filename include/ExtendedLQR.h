@@ -336,10 +336,14 @@ inline double extendedLQR(const size_t& ell,
 
 	for (iter = 0; iter < maxIter; ++iter) {
 		// forward pass
+		/// \param uHat
 		for (size_t t = 0; t < ell; ++t) {
+			/// \brief formulation (28)(12)
 			const Matrix<uDim> uHat = L[t]*xHat + l[t];
+			/// \brief formulation (28)(21)
 			const Matrix<xDim> xHatPrime = g(xHat, uHat);
 
+			/// \brief formulation (29)
 			const Matrix<xDim, xDim> ABar = jacobian1(xHatPrime, uHat, gBar);
 			const Matrix<xDim, uDim> BBar = jacobian2(xHatPrime, uHat, gBar);
 			const Matrix<xDim> cBar = xHat - ABar*xHatPrime - BBar*uHat;
