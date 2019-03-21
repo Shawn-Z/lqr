@@ -28,6 +28,8 @@ include_directories(
 
 add_executable(lqr
         include/matrix.h
+        include/ExtendedLQR.h
+        src/ExtendedLQR_diffdrive_noTimeOpt.cpp
         src/LQR.cpp)
 
 target_link_libraries(lqr

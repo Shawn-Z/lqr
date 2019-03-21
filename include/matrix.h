@@ -940,9 +940,9 @@ inline void jacobi(const SymmetricMatrix<_size>& m, Matrix<_size, _size>& V, Sym
 		}
 
 		double theta = 0.5*(D(q,q) - D(p,p)) / D(p,q);
-		double t = 1 / (abs(theta) + _hypot(theta, 1));
+		double t = 1 / (abs(theta) + hypot(theta, 1)); //// todo hypot -- abs first
 		if (theta < 0) t = -t;
-		double c = 1 / _hypot(t, 1);
+		double c = 1 / hypot(t, 1);
 		double s = c*t;
 		double tau = s / (1 + c);
 
